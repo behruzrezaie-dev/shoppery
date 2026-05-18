@@ -4,6 +4,7 @@ import Categories from './Categories';
 import Hero from './Hero';
 import IntroducingProducts from './IntroducingProducts';
 import Services from './Services';
+import Trusted from './Trusted';
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <Services />
             <IntroducingProducts />
             <Categories />
+            <Trusted />
         </MainLayout>
     );
 }

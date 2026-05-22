@@ -5,6 +5,9 @@ import { Head } from '@inertiajs/react';
 
 import DeliveryCard from './DeliveryCard';
 import FilterBar from './FilterBar';
+import ProductCard from './ProductCard';
+import ProductsGrid from './ProductsGrid';
+import products from './Products';
 
 export default function Index() {
     return (
@@ -27,6 +30,8 @@ export default function Index() {
                 <Bannar />
                 <FilterBar />
                 <DeliveryCard />
+                <ProductsGrid
+                products={products} />
             </div>
         </MainLayout>
     );

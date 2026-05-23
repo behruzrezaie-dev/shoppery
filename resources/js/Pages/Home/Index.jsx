@@ -1,11 +1,11 @@
 import MainLayout from '@/Components/Layout/MainLayout';
 import { Head } from '@inertiajs/react';
+import BestSeller2 from './BestSeller2';
 import BestSellerProducts from './BestSellerProducts';
 import Categories from './Categories';
 import Experience from './Experience';
 import Hero from './Hero';
 import IntroducingProducts from './IntroducingProducts';
-import NewsPopUp from './NewsPopUp';
 import Offers from './Offers';
 import Services from './Services';
 import Trusted from './Trusted';
@@ -22,7 +22,8 @@ export default function Home() {
             <Experience />
             <Offers />
             <BestSellerProducts />
-            <NewsPopUp />
+            <BestSeller2 />
+            {/* <NewsPopUp /> */}
         </MainLayout>
     );
 }

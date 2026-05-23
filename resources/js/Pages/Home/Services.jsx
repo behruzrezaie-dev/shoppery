@@ -30,28 +30,34 @@ const Service = [
 const Services = () => {
     return (
         <AnimatedSection className="relative flex justify-center">
-            <section className="container z-10 mx-auto flex justify-center px-4 py-20">
-                <div className="flex rounded-[8px] border-[1px] border-[#ccc] bg-white shadow-md">
-                    {Service.map((item, index) => {
-                        return (
+            <section className="container mx-auto max-w-7xl px-4 py-10 md:py-16 lg:py-20">
+                <div className="overflow-hidden rounded-lg border border-[#E5E5E5] bg-white shadow-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                        {Service.map((item, index) => (
                             <div
                                 key={item.id}
-                                className={`${index === 0 ? 'rounded-bl-lg rounded-tl-lg' : ''} ${index === 3 ? 'rounded-br-lg rounded-tr-lg' : ''} group flex h-[222px] w-[330px] flex-col gap-3 ${index < 3 ? 'border-r-[1px] border-[#ccc]' : ''} cursor-pointer p-8 transition-all duration-300 ease-in-out hover:bg-[#00B207]`}
+                                className={`group flex flex-col gap-4 p-6 transition-all duration-300 hover:bg-[#00B207] md:p-8 ${
+                                    index !== Service.length - 1
+                                        ? 'border-b border-[#E5E5E5] sm:border-b lg:border-b-0 lg:border-r'
+                                        : ''
+                                } `}
                             >
                                 <img
-                                    className="h-[70px] w-[70px]"
+                                    className="h-[60px] w-[60px] object-contain"
                                     src={item.src}
-                                    alt="icon"
+                                    alt={item.title}
                                 />
-                                <h2 className="text-lg font-semibold leading-[150%] tracking-[0%] text-[#1A1A1A] group-hover:text-white">
+
+                                <h2 className="text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-white md:text-lg">
                                     {item.title}
                                 </h2>
-                                <p className="text-sm font-medium leading-[150%] tracking-[0%] text-[#808080] group-hover:text-white">
+
+                                <p className="text-sm text-[#808080] transition-colors group-hover:text-white">
                                     {item.des}
                                 </p>
                             </div>
-                        );
-                    })}
+                        ))}
+                    </div>
                 </div>
             </section>
         </AnimatedSection>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import AdditionalInformation from './AdditionalInformation';
 import PageOne from './PageOne';
 import PageThree from './PageThree';
-import PageTwo from './PageTwo';
 
 function ProductTabs() {
     const [Active, setActive] = useState('description');
@@ -49,7 +49,7 @@ function ProductTabs() {
                 )}
                 {Active === 'addational' && (
                     <div>
-                        <PageTwo />
+                        <AdditionalInformation />
                     </div>
                 )}
                 {Active === 'feedback' && (
